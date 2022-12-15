@@ -1,3 +1,4 @@
+//variables that getElementById from document
 var canvas = document.getElementById("pixelCanvas");
 var color = document.getElementById("colorPicker");
 var sizePicker = document.getElementById("sizePicker");
@@ -5,6 +6,7 @@ var height = document.getElementById("inputHeight");
 var width = document.getElementById("inputWidth");
 
 
+//function to create cells and to assigne listeners to them
 function makeGrid(height, width) {
     for (let y = 0; y < height; y++) {
         let row = canvas.insertRow(y);
@@ -22,6 +24,7 @@ function makeGrid(height, width) {
 }
 
 
+//function that takes sizePicker submit button and calls makeGrid
 sizePicker.addEventListener("submit", function(evt) {
     evt.preventDefault();
     while (canvas.hasChildNodes()) {
